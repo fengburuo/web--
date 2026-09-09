@@ -1,0 +1,132 @@
+﻿/* ============================================
+   全局样式重置与基础设置
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* 使用渐变背景，提升视觉层次感 */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* Flexbox 居中布局 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+/* ============================================
+   名片卡片主体样式
+   ============================================ */
+.card {
+    /* 白色背景 */
+    background-color: #ffffff;
+    /* 12px 圆角 */
+    border-radius: 12px;
+    /* 柔和阴影效果 */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    /* 内边距 */
+    padding: 40px 35px;
+    /* 宽度约束 */
+    width: 320px;
+    /* 居中文字 */
+    text-align: center;
+    /* 过渡动画：hover 时垂直上浮 8px，耗时 0.3s */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 鼠标悬停效果：轻微上浮 + 阴影加深 */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   头像样式
+   ============================================ */
+.avatar {
+    /* 宽度与高度相等，确保圆形 */
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    /* 溢出隐藏，配合圆角实现圆形裁剪 */
+    overflow: hidden;
+    /* 圆形 */
+    border-radius: 50%;
+    /* 边框装饰 */
+    border: 3px solid #667eea;
+}
+
+.avatar img {
+    /* 图片填满容器 */
+    width: 100%;
+    height: 100%;
+    /* 对象缩放模式：覆盖容器 */
+    object-fit: cover;
+}
+
+/* ============================================
+   姓名与职位样式
+   ============================================ */
+.name {
+    /* 字号 22px，字重 600 */
+    font-size: 22px;
+    font-weight: 600;
+    /* 深灰色字体 */
+    color: #333333;
+    /* 底部间距 */
+    margin-bottom: 8px;
+}
+
+.position {
+    /* 字号 14px，颜色稍浅 */
+    font-size: 14px;
+    color: #888888;
+    /* 字重 400 */
+    font-weight: 400;
+    /* 底部间距 */
+    margin-bottom: 25px;
+}
+
+/* ============================================
+   联系方式区域样式
+   ============================================ */
+.contact {
+    /* 顶部边框分割线 */
+    border-top: 1px solid #eeeeee;
+    /* 内边距 */
+    padding-top: 20px;
+}
+
+.contact-item {
+    /* 每条联系方式之间的间距 */
+    margin-bottom: 12px;
+    /* Flex 布局，标签与内容对齐 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 内边距 */
+    padding: 8px 12px;
+    /* 轻微的背景色，hover 时高亮 */
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.contact-item:hover {
+    background-color: #f5f7ff;
+}
+
+/* 标签文字（邮箱、电话、地址） */
+.contact-item .label {
+    font-size: 13px;
+    color: #999999;
+}
+
+/* 具体联系信息 */
+.contact-item .value {
+    font-size: 13px;
+    color: #555555;
+}
