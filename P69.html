@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>灯箱画廊</title>
+    <style>
+        img {
+            width: 100px;
+        }
+        div {
+            width: 1000px;
+            height: 630px;
+            background-color: #2de50c;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+           line-height: 100px;
+            color: #ed0606fb;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+        ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 0 5px;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        a:hover {
+            border-bottom: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>灯箱画廊</h1>
+        <hr size="5" color="red">
+        <marquee behavior="alternate" direction=""onMouseOver="this.stop()" onMouseOut="this.start()">
+            <ul>
+                  <li><a href="images/t1.jpg" target="bigpic"><p>t1</p><img src="images/t1.jpg" alt=""></a></li> 
+                  <li><a href="images/t2.jpg" target="bigpic"><p>t2</p><img src="images/t2.jpg" alt=""></a></li>
+                  <li><a href="images/t3.jpg" target="bigpic"><p>t3</p><img src="images/t3.jpg" alt=""></a></li>
+                  <li><a href="images/t4.jpg" target="bigpic"><p>t4</p><img src="images/t4.jpg" alt=""></a></li>
+                  <li><a href="images/t5.jpg" target="bigpic"><p>t5</p><img src="images/t5.jpg" alt=""></a></li>
+                  <li><a href="images/t6.jpg" target="bigpic"><p>t6</p><img src="images/t6.jpg" alt=""></a></li>
+                  <li><a href="images/t7.jpg" target="bigpic"><p>t7</p><img src="images/t7.jpg" alt=""></a></li> 
+            </ul>
+        </marquee>
+        <iframe src="" frameborder="0" name="bigpic" width="640px" height="360px"></iframe>
+    </div>
+    
+</body>
+</html>
