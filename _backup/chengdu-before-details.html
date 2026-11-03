@@ -1,0 +1,775 @@
+﻿<!DOCTYPE html>
+<html lang='zh-CN'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>成都 · 天府之国 | 一座来了就不想走的城市</title>
+<meta name='description' content='成都：天府之国，锦绣蓉城。天府概览、千年蜀史、必游地标、成都美食、蜀地非遗与旅行贴士，带你看懂成都的厚重与烟火。'>
+<meta name='theme-color' content='#8B1A1A'>
+<meta property='og:title' content='成都 · 天府之国'>
+<meta property='og:description' content='天府之国，锦绣蓉城。一座来了就不想走的城市。'>
+<meta property='og:type' content='website'>
+<link rel='preconnect' href='https://miaoda.feishu.cn' crossorigin>
+<link rel='preload' as='image' href='chengdu-images/hero.jpg' fetchpriority='high'>
+<link rel='icon' href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%238B1A1A'/%3E%3Cpath d='M32 12 C22 22 18 30 18 38 a14 14 0 0 0 28 0 c0-8-4-16-14-26z' fill='%23D4A843'/%3E%3C/svg%3E">
+<link href='https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap' rel='stylesheet'>
+<script>document.documentElement.className += ' js';</script>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --shu-red: #C23A2B; --shu-red-deep: #8B1A1A; --shu-red-light: #E85D4F;
+  --ginkgo-gold: #D4A843; --ginkgo-gold-light: #F0D68A; --ginkgo-gold-pale: #FDF0C4;
+  --celadon-green: #5B8C6F; --celadon-green-deep: #3D6B4F; --celadon-green-light: #8FB996;
+  --rice-white: #FAF6F0; --rice-white-dark: #F0E8DA; --light-gray: #E8E0D4;
+  --ink-black: #1A1A1A; --ink-gray: #3A3A3A; --ink-light: #6B6B6B;
+}
+html { scroll-behavior: smooth; scroll-padding-top: 70px; font-size: 16px; }
+body { font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif; color: var(--ink-black); background: var(--rice-white); line-height: 1.8; overflow-x: hidden; }
+h1,h2,h3,h4 { font-family: 'Noto Serif SC', 'STSong', 'SimSun', serif; font-weight: 700; }
+
+/* ===== 导航 ===== */
+.nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 0 5%; height: 70px; display: flex; align-items: center; justify-content: space-between; background: linear-gradient(135deg, rgba(139,26,26,0.95), rgba(194,58,43,0.9)); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(139,26,26,0.3); transition: height 0.3s ease, box-shadow 0.3s ease; }
+.nav.scrolled { height: 58px; box-shadow: 0 4px 28px rgba(0,0,0,0.35); }
+.nav-logo { font-family: 'Noto Serif SC', serif; font-size: 1.5rem; font-weight: 900; color: var(--ginkgo-gold-light); text-decoration: none; letter-spacing: 0.1em; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: rgba(250,246,240,0.9); text-decoration: none; font-size: 0.9rem; font-weight: 400; letter-spacing: 0.05em; transition: color 0.3s ease; position: relative; padding: 4px 0; }
+.nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1.5px; background: var(--ginkgo-gold); transition: width 0.3s ease; }
+.nav-links a:hover, .nav-links a.active { color: var(--ginkgo-gold-light); }
+.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+
+/* ===== Hero ===== */
+.hero { position: relative; width: 100%; height: 100vh; min-height: 600px; overflow: hidden; }
+.hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 120%; background: url('chengdu-images/hero.jpg') center center / cover no-repeat; transform: scale(1.05); animation: heroZoom 14s ease-out forwards; }
+@keyframes heroZoom { to { transform: scale(1); } }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(26,26,26,0.45) 0%, rgba(139,26,26,0.25) 40%, rgba(91,140,111,0.15) 70%, rgba(26,26,26,0.65) 100%); }
+.hero-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 10; width: 90%; }
+.hero-subtitle { font-family: 'Noto Sans SC', sans-serif; font-size: 1rem; font-weight: 300; color: var(--ginkgo-gold-light); letter-spacing: 0.5em; margin-bottom: 1rem; opacity: 0.9; }
+.hero-title { font-family: 'Noto Serif SC', serif; font-size: clamp(3rem, 8vw, 6rem); font-weight: 900; color: #fff; letter-spacing: 0.15em; text-shadow: 0 4px 30px rgba(0,0,0,0.5); margin-bottom: 1.5rem; }
+.hero-desc { font-family: 'Noto Serif SC', serif; font-size: 1.2rem; font-weight: 400; color: rgba(250,246,240,0.88); letter-spacing: 0.1em; max-width: 600px; margin: 0 auto 2.5rem; }
+.hero-btn { display: inline-block; padding: 14px 48px; background: linear-gradient(135deg, var(--shu-red), var(--shu-red-deep)); color: var(--rice-white); text-decoration: none; font-family: 'Noto Serif SC', serif; font-size: 1rem; letter-spacing: 0.15em; border-radius: 50px; border: 1px solid rgba(212,168,67,0.4); box-shadow: 0 8px 32px rgba(139,26,26,0.4); transition: all 0.4s ease; }
+.hero-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(139,26,26,0.55); border-color: var(--ginkgo-gold); }
+.hero-scroll { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 10; width: 24px; height: 40px; }
+.hero-scroll::before { content: ''; display: block; width: 24px; height: 40px; border: 2px solid rgba(250,246,240,0.5); border-radius: 12px; position: relative; }
+.hero-scroll::after { content: ''; position: absolute; top: 8px; left: 50%; transform: translateX(-50%); width: 4px; height: 8px; background: var(--ginkgo-gold-light); border-radius: 2px; animation: scrollDot 2s ease-in-out infinite; }
+@keyframes scrollDot { 0%,100%{opacity:1;top:8px;}50%{opacity:0.3;top:20px;} }
+
+/* 漂浮装饰 */
+.deco { position: absolute; pointer-events: none; z-index: 5; opacity: 0.55; }
+.deco-ginkgo { width: 40px; height: 40px; background: var(--ginkgo-gold); clip-path: polygon(50% 0%, 100% 35%, 82% 100%, 50% 75%, 18% 100%, 0% 35%); animation: floatGinkgo 6s ease-in-out infinite; }
+.deco-bamboo { width: 6px; height: 60px; background: linear-gradient(to bottom, var(--celadon-green), var(--celadon-green-light)); border-radius: 3px; animation: floatBamboo 8s ease-in-out infinite; }
+.deco-bamboo::before, .deco-bamboo::after { content: ''; position: absolute; width: 20px; height: 3px; background: var(--celadon-green); border-radius: 2px; }
+.deco-bamboo::before { top: 15px; left: -7px; transform: rotate(-20deg); }
+.deco-bamboo::after { top: 35px; right: -7px; transform: rotate(20deg); }
+.deco-mask { width: 50px; height: 50px; background: linear-gradient(135deg, var(--shu-red), var(--ginkgo-gold)); clip-path: polygon(20% 0%, 80% 0%, 100% 40%, 90% 100%, 10% 100%, 0% 40%); animation: floatMask 7s ease-in-out infinite; }
+@keyframes floatGinkgo { 0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-20px) rotate(10deg);} }
+@keyframes floatBamboo { 0%,100%{transform:translateY(0) rotate(-5deg);}50%{transform:translateY(-15px) rotate(5deg);} }
+@keyframes floatMask { 0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-25px) scale(1.05);} }
+
+/* 分隔线 */
+.ink-divider { width: 100%; height: 60px; position: relative; overflow: hidden; }
+.ink-divider::before { content: ''; position: absolute; top: 50%; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent, var(--ink-gray) 20%, var(--ink-gray) 80%, transparent); }
+.ink-divider::after { content: '◆'; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: var(--shu-red); font-size: 0.6rem; background: var(--rice-white); padding: 0 1rem; }
+.ink-divider--dark::before { background: linear-gradient(90deg, transparent, rgba(250,246,240,0.4) 20%, rgba(250,246,240,0.4) 80%, transparent); }
+.ink-divider--dark::after { background: var(--ink-black); }
+
+/* 通用 section */
+.section { padding: 100px 5%; position: relative; }
+.section--dark { background: linear-gradient(180deg, var(--ink-black) 0%, #2A2A2A 100%); color: var(--rice-white); }
+.section-header { text-align: center; margin-bottom: 60px; }
+.section-label { font-family: 'Noto Sans SC', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ginkgo-gold); margin-bottom: 0.75rem; }
+.section-title { font-family: 'Noto Serif SC', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: inherit; letter-spacing: 0.08em; margin-bottom: 1rem; }
+.section-subtitle { font-family: 'Noto Sans SC', sans-serif; font-size: 1rem; font-weight: 300; color: var(--ink-light); max-width: 600px; margin: 0 auto; letter-spacing: 0.05em; }
+.section--dark .section-subtitle { color: rgba(250,246,240,0.7); }
+
+/* 滚动揭示 */
+html.js .reveal { opacity: 0; transform: translateY(36px); transition: opacity 0.8s cubic-bezier(0.22,0.61,0.36,1), transform 0.8s cubic-bezier(0.22,0.61,0.36,1); will-change: opacity, transform; }
+html.js .reveal.in { opacity: 1; transform: translateY(0); }
+.reveal-d1 { transition-delay: 0.12s; }
+.reveal-d2 { transition-delay: 0.24s; }
+.reveal-d3 { transition-delay: 0.36s; }
+/* 系统开启“减少动态效果”时，禁用移动动画、浮动装饰与平滑滚动 */
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg { animation: none; transform: scale(1); }
+  .deco-ginkgo, .deco-bamboo, .deco-mask { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* 概览 */
+.overview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1200px; margin: 0 auto; align-items: center; }
+.overview-image { position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(139,26,26,0.15); }
+.overview-image img { width: 100%; height: 420px; object-fit: cover; display: block; transition: transform 0.6s ease; }
+.overview-image:hover img { transform: scale(1.05); }
+.overview-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(194,58,43,0.1), rgba(91,140,111,0.1)); pointer-events: none; }
+.overview-text h3 { font-family: 'Noto Serif SC', serif; font-size: 1.8rem; color: var(--shu-red); margin-bottom: 1.5rem; letter-spacing: 0.05em; }
+.overview-text p { font-size: 1rem; color: var(--ink-gray); line-height: 2; margin-bottom: 1rem; }
+.overview-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 2rem; }
+.stat-item { text-align: center; padding: 20px 10px; background: var(--rice-white-dark); border-radius: 12px; border: 1px solid var(--light-gray); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.stat-item:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(139,26,26,0.12); }
+.stat-number { font-family: 'Noto Serif SC', serif; font-size: 1.7rem; font-weight: 900; color: var(--shu-red); }
+.stat-label { font-size: 0.8rem; color: var(--ink-light); margin-top: 4px; }
+
+/* 时间轴 */
+.timeline { max-width: 900px; margin: 0 auto; position: relative; }
+.timeline::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 2px; height: 100%; background: linear-gradient(to bottom, var(--shu-red), var(--celadon-green), var(--ginkgo-gold)); }
+.timeline-item { display: flex; align-items: flex-start; margin-bottom: 50px; position: relative; }
+.timeline-item:nth-child(even) { flex-direction: row-reverse; }
+.timeline-content { width: 45%; padding: 30px; background: #fff; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); border: 1px solid var(--light-gray); transition: all 0.4s ease; }
+.timeline-content:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(194,58,43,0.14); border-color: var(--shu-red-light); }
+.timeline-dot { position: absolute; left: 50%; top: 32px; transform: translateX(-50%); width: 16px; height: 16px; background: var(--shu-red); border-radius: 50%; border: 3px solid var(--rice-white); box-shadow: 0 0 0 3px var(--shu-red); z-index: 1; }
+.timeline-period { font-family: 'Noto Serif SC', serif; font-size: 0.85rem; color: var(--shu-red); font-weight: 600; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+.timeline-title { font-family: 'Noto Serif SC', serif; font-size: 1.3rem; color: var(--ink-black); margin-bottom: 0.75rem; }
+.timeline-desc { font-size: 0.9rem; color: var(--ink-light); line-height: 1.8; }
+
+/* 穿越千年 · 探源蜀地（画廊） */
+.gallery-grid { display: grid; grid-template-columns: repeat(3,1fr); grid-auto-rows: 240px; gap: 20px; max-width: 1200px; margin: 0 auto; }
+.gallery-card { position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 36px rgba(0,0,0,0.16); transition: all 0.5s cubic-bezier(0.25,0.46,0.45,0.94); aspect-ratio: auto; }
+.gallery-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 20px 56px rgba(139,26,26,0.3); }
+.gallery-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(26,26,26,0.75) 100%); z-index: 1; transition: all 0.4s ease; pointer-events: none; }
+.gallery-card:hover::before { background: linear-gradient(180deg, transparent 25%, rgba(139,26,26,0.75) 100%); }
+.gallery-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.gallery-card:hover img { transform: scale(1.1); }
+.gallery-card--tall { grid-row: span 2; }
+.gallery-info { position: absolute; left: 0; right: 0; bottom: 0; padding: 20px 22px; z-index: 2; }
+.gallery-tag { display: inline-block; padding: 3px 10px; background: rgba(212,168,67,0.92); color: #431f13; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; border-radius: 20px; margin-bottom: 0.6rem; }
+.gallery-name { font-family: 'Noto Serif SC', serif; font-size: 1.18rem; font-weight: 700; color: #fff; margin-bottom: 0.35rem; letter-spacing: 0.04em; }
+.gallery-desc { font-size: 0.8rem; color: rgba(250,246,240,0.76); line-height: 1.6; }
+.gallery-card--quote { background: linear-gradient(160deg, var(--shu-red-deep) 0%, #6d1414 55%, var(--ink-black) 130%); display: flex; align-items: center; }
+.gallery-card--quote::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, rgba(212,168,67,0.18), transparent 55%); z-index: 0; }
+.gallery-card--quote:hover::before { background: radial-gradient(circle at 80% 20%, rgba(212,168,67,0.3), transparent 55%); }
+.gallery-card--quote:hover { transform: translateY(-8px); box-shadow: 0 20px 56px rgba(139,26,26,0.35); }
+.gallery-quote { position: relative; z-index: 1; padding: 26px 26px; }
+.gallery-quote-text { font-family: 'Noto Serif SC', serif; font-size: 1.28rem; font-weight: 600; color: var(--ginkgo-gold-light); line-height: 1.9; letter-spacing: 0.06em; margin: 0.6rem 0 0.8rem; }
+.gallery-quote-author { font-size: 0.78rem; color: rgba(250,246,240,0.7); text-align: right; letter-spacing: 0.1em; }
+.gallery-card--sunbird { background: radial-gradient(circle at 50% 35%, #3b0f0f 0%, #200606 68%); display: flex; align-items: center; justify-content: center; color: var(--ginkgo-gold); }
+.gallery-card--sunbird::before { display: none; }
+.gallery-sunbird { position: relative; z-index: 1; padding: 22px; text-align: center; }
+.gallery-sunbird svg { width: 118px; height: 118px; margin: 0 auto 0.8rem; display: block; opacity: 0.92; filter: drop-shadow(0 0 14px rgba(212,168,67,0.45)); animation: sunbirdSpin 36s linear infinite; }
+@keyframes sunbirdSpin { to { transform: rotate(360deg); } }
+.gallery-card--sunbird .gallery-name { color: var(--ginkgo-gold-light); }
+.gallery-card--sunbird .gallery-desc { text-align: center; margin-top: 0.3rem; }
+
+/* 地标 */
+.landmarks-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 30px; max-width: 1200px; margin: 0 auto; }
+.landmark-card { position: relative; border-radius: 20px; overflow: hidden; aspect-ratio: 4/3; box-shadow: 0 10px 40px rgba(0,0,0,0.3); transition: all 0.5s cubic-bezier(0.25,0.46,0.45,0.94); }
+.landmark-card:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 20px 60px rgba(194,58,43,0.35); }
+.landmark-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(26,26,26,0.82) 100%); z-index: 1; transition: all 0.4s ease; }
+.landmark-card:hover::before { background: linear-gradient(180deg, rgba(194,58,43,0.25) 0%, rgba(26,26,26,0.92) 100%); }
+.landmark-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.landmark-card:hover img { transform: scale(1.1); }
+.landmark-info { position: absolute; bottom: 0; left: 0; right: 0; padding: 28px; z-index: 2; }
+.landmark-tag { display: inline-block; padding: 4px 12px; background: var(--shu-red); color: #fff; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; border-radius: 20px; margin-bottom: 0.75rem; }
+.landmark-name { font-family: 'Noto Serif SC', serif; font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; letter-spacing: 0.05em; }
+.landmark-desc { font-size: 0.88rem; color: rgba(250,246,240,0.75); line-height: 1.6; }
+.landmark-card--featured { grid-column: span 2; aspect-ratio: 21/9; }
+
+/* 美食 */
+.food-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 25px; max-width: 1200px; margin: 0 auto; }
+.food-card { background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.06); border: 1px solid var(--light-gray); transition: all 0.4s ease; }
+.food-card:hover { transform: translateY(-8px); box-shadow: 0 16px 50px rgba(194,58,43,0.18); }
+.food-image { width: 100%; height: 200px; overflow: hidden; }
+.food-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.food-card:hover .food-image img { transform: scale(1.1); }
+.food-body { padding: 20px; }
+.food-name { font-family: 'Noto Serif SC', serif; font-size: 1.2rem; font-weight: 700; color: var(--ink-black); margin-bottom: 0.5rem; }
+.food-origin { font-size: 0.75rem; color: var(--shu-red); font-weight: 500; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
+.food-desc { font-size: 0.85rem; color: var(--ink-light); line-height: 1.7; }
+
+/* 非遗 */
+.heritage { background: linear-gradient(135deg, var(--celadon-green-deep) 0%, var(--celadon-green) 50%, var(--celadon-green-deep) 100%); color: var(--rice-white); position: relative; overflow: hidden; }
+.heritage::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.06) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 50%); pointer-events: none; }
+.heritage-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 30px; max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+.heritage-card { background: rgba(255,255,255,0.08); backdrop-filter: blur(10px); border-radius: 20px; padding: 40px 30px; border: 1px solid rgba(255,255,255,0.15); transition: all 0.4s ease; text-align: center; }
+.heritage-card:hover { transform: translateY(-8px); background: rgba(255,255,255,0.13); box-shadow: 0 20px 50px rgba(0,0,0,0.25); border-color: rgba(255,255,255,0.3); }
+.heritage-icon { width: 80px; height: 80px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, var(--ginkgo-gold), var(--shu-red)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Noto Serif SC', serif; font-size: 1.8rem; font-weight: 700; color: #fff; box-shadow: 0 8px 25px rgba(194,58,43,0.35); }
+.heritage-name { font-family: 'Noto Serif SC', serif; font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; letter-spacing: 0.05em; }
+.heritage-desc { font-size: 0.9rem; color: rgba(250,246,240,0.78); line-height: 1.8; }
+
+/* 贴士 */
+.tips-content { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 1000px; margin: 0 auto; }
+.tips-card { background: #fff; border-radius: 20px; padding: 40px; box-shadow: 0 8px 30px rgba(0,0,0,0.05); border: 1px solid var(--light-gray); transition: all 0.4s ease; }
+.tips-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(139,26,26,0.12); border-color: var(--shu-red-light); }
+.tips-card-icon { width: 52px; height: 52px; background: linear-gradient(135deg, var(--shu-red), var(--shu-red-deep)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--ginkgo-gold-light); }
+.tips-card-icon svg { width: 26px; height: 26px; }
+.tips-card h3 { font-family: 'Noto Serif SC', serif; font-size: 1.3rem; color: var(--ink-black); margin-bottom: 1rem; }
+.tips-card p, .tips-card li { font-size: 0.9rem; color: var(--ink-light); line-height: 1.9; }
+.tips-card ul { list-style: none; padding: 0; }
+.tips-card li { padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; }
+.tips-card li::before { content: '•'; position: absolute; left: 0.3rem; color: var(--shu-red); font-weight: 700; }
+
+/* 页脚 */
+.footer { background: var(--ink-black); color: var(--rice-white); padding: 60px 5% 30px; text-align: center; }
+.footer-logo { font-family: 'Noto Serif SC', serif; font-size: 2rem; font-weight: 900; color: var(--ginkgo-gold); letter-spacing: 0.1em; margin-bottom: 1rem; }
+.footer-desc { font-size: 0.9rem; color: rgba(250,246,240,0.5); max-width: 500px; margin: 0 auto 2rem; line-height: 1.8; }
+.footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap; }
+.footer-links a { color: rgba(250,246,240,0.6); text-decoration: none; font-size: 0.85rem; transition: color 0.3s ease; }
+.footer-links a:hover { color: var(--ginkgo-gold-light); }
+.footer-divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent); margin: 2rem 0; }
+.footer-copyright { font-size: 0.75rem; color: rgba(250,246,240,0.35); }
+
+/* 官方直达 */
+.links-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; max-width: 1100px; margin: 0 auto; }
+.link-card { position: relative; display: flex; align-items: flex-start; gap: 16px; padding: 26px 24px; background: #fff; border: 1px solid var(--light-gray); border-radius: 16px; text-decoration: none; color: inherit; transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease; overflow: hidden; }
+.link-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, var(--shu-red), var(--ginkgo-gold)); transform: scaleY(0); transform-origin: top; transition: transform 0.35s ease; }
+.link-card:hover { transform: translateY(-6px); box-shadow: 0 18px 44px rgba(139,26,26,0.14); border-color: var(--shu-red-light); }
+.link-card:hover::before { transform: scaleY(1); }
+.link-icon { flex: 0 0 52px; width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, var(--rice-white-dark), var(--ginkgo-gold-pale)); display: flex; align-items: center; justify-content: center; color: var(--shu-red); transition: all 0.35s ease; }
+.link-card:hover .link-icon { background: linear-gradient(135deg, var(--shu-red), var(--shu-red-deep)); color: var(--ginkgo-gold-light); }
+.link-icon svg { width: 26px; height: 26px; }
+.link-body { flex: 1; min-width: 0; }
+.link-name { font-family: 'Noto Serif SC', serif; font-size: 1.08rem; font-weight: 700; color: var(--ink-black); margin-bottom: 4px; letter-spacing: 0.02em; }
+.link-domain { font-family: 'Consolas', monospace; font-size: 0.72rem; color: var(--shu-red); letter-spacing: 0.02em; margin-bottom: 8px; display: block; }
+.link-desc { font-size: 0.82rem; color: var(--ink-light); line-height: 1.65; }
+.link-arrow { position: absolute; top: 22px; right: 20px; color: var(--light-gray); transition: all 0.35s ease; }
+.link-card:hover .link-arrow { color: var(--shu-red); transform: translate(3px,-3px); }
+.link-arrow svg { width: 16px; height: 16px; }
+
+/* 回到顶部 */
+.back-top { position: fixed; right: 28px; bottom: 28px; width: 46px; height: 46px; border-radius: 50%; background: linear-gradient(135deg, var(--shu-red), var(--shu-red-deep)); color: var(--ginkgo-gold-light); display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; pointer-events: none; transition: all 0.35s ease; box-shadow: 0 8px 24px rgba(139,26,26,0.4); z-index: 900; border: 1px solid rgba(212,168,67,0.4); }
+.back-top.show { opacity: 1; pointer-events: auto; }
+.back-top:hover { transform: translateY(-3px); }
+.back-top svg { width: 20px; height: 20px; }
+
+@media (max-width: 1024px) {
+  .gallery-grid { grid-auto-rows: 220px; gap: 16px; }
+  .landmarks-grid { grid-template-columns: 1fr; }
+  .landmark-card--featured { grid-column: span 1; aspect-ratio: 16/9; }
+  .food-grid { grid-template-columns: repeat(2,1fr); }
+  .heritage-grid { grid-template-columns: repeat(2,1fr); }
+  .links-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 768px) {
+  .nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .section { padding: 60px 20px; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 190px; }
+  .gallery-card--tall { grid-row: span 1; }
+  .gallery-card--quote { grid-column: 1 / -1; min-height: 200px; }
+  .gallery-card--sunbird { grid-column: 1 / -1; }
+  .overview-grid { grid-template-columns: 1fr; gap: 30px; }
+  .overview-image img { height: 280px; }
+  .timeline::before { left: 20px; }
+  .timeline-item, .timeline-item:nth-child(even) { flex-direction: row; padding-left: 50px; margin-bottom: 32px; }
+  .timeline-content { width: 100%; padding: 22px; }
+  .timeline-dot { left: 20px; top: 26px; }
+  .food-grid { grid-template-columns: 1fr; }
+  .heritage-grid { grid-template-columns: 1fr; }
+  .tips-content { grid-template-columns: 1fr; }
+  .links-grid { grid-template-columns: 1fr; }
+  .overview-stats { gap: 10px; }
+  .stat-number { font-size: 1.3rem; }
+  .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 240px; }
+  .gallery-card--quote { min-height: 220px; }
+  .gallery-quote-text { font-size: 1.1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  html.js .reveal { opacity: 1; transform: none; }
+  html.js .reveal-d1, html.js .reveal-d2, html.js .reveal-d3 { transition-delay: 0s !important; }
+}
+</style>
+</head>
+<body>
+
+<nav class='nav' id='nav'>
+  <a href='#top' class='nav-logo'>成都</a>
+  <ul class='nav-links'>
+    <li><a href='#overview'>天府概览</a></li>
+    <li><a href='#history'>千年蜀史</a></li>
+    <li><a href='#gallery'>探源蜀地</a></li>
+    <li><a href='#landmarks'>必游地标</a></li>
+    <li><a href='#food'>成都美食</a></li>
+    <li><a href='#heritage'>蜀地非遗</a></li>
+    <li><a href='#tips'>旅行贴士</a></li>
+  </ul>
+</nav>
+
+<section class='hero' id='top'>
+  <div class='hero-bg'></div>
+  <div class='hero-overlay'></div>
+  <div class='deco' style='top:20%;left:10%'><div class='deco-ginkgo'></div></div>
+  <div class='deco' style='top:60%;left:5%'><div class='deco-bamboo'></div></div>
+  <div class='deco' style='top:30%;right:15%'><div class='deco-mask'></div></div>
+  <div class='deco' style='top:70%;right:8%'><div class='deco-ginkgo' style='width:30px;height:30px'></div></div>
+  <div class='deco' style='top:15%;right:25%'><div class='deco-bamboo' style='height:45px'></div></div>
+  <div class='deco' style='bottom:25%;left:15%'><div class='deco-ginkgo' style='width:25px;height:25px'></div></div>
+  <div class='hero-content'>
+    <p class='hero-subtitle'>天府之国 · 锦绣蓉城</p>
+    <h1 class='hero-title'>成都</h1>
+    <p class='hero-desc'>一座来了就不想走的城市<br>三千年的厚重与烟火，在此交织</p>
+    <a href='#overview' class='hero-btn'>探索成都</a>
+  </div>
+  <div class='hero-scroll' aria-hidden='true'></div>
+</section>
+
+<div class='ink-divider'></div>
+
+<section class='section overview' id='overview'>
+  <div class='section-header'>
+    <p class='section-label reveal'>Overview</p>
+    <h2 class='section-title reveal reveal-d1'>天府概览</h2>
+    <p class='section-subtitle reveal reveal-d2'>成都，别称蓉城，地处四川盆地西部，是四川省省会，有着2300多年的建城史</p>
+  </div>
+  <div class='overview-grid'>
+    <div class='overview-image reveal'>
+      <img src='chengdu-images/overview.jpg' alt='成都太古里古今交融的城市天际线：古朴川西韵味与现代商业街区同框' loading='eager' width='800' height='564'>
+    </div>
+    <div class='overview-text reveal reveal-d1'>
+      <h3>少不入川，老不出蜀</h3>
+      <p>成都，一座被时光温柔以待的城市。这里既有三千年的厚重历史，又有最市井的烟火气息。茶馆里的盖碗茶，街巷中的火锅香，熊猫憨态的可掬模样，构成了成都最动人的底色。</p>
+      <p>作为古蜀文明的发祥地，成都曾是天府之国的核心。李冰父子修建的都江堰，让这片土地两千年来旱涝保收，物产丰饶。而今，它依然是中国最具幸福感的城市之一。</p>
+      <div class='overview-stats'>
+        <div class='stat-item'><div class='stat-number'>2300+</div><div class='stat-label'>年建城史</div></div>
+        <div class='stat-item'><div class='stat-number'>2100万</div><div class='stat-label'>常住人口</div></div>
+        <div class='stat-item'><div class='stat-number'>14335</div><div class='stat-label'>平方公里</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class='ink-divider'></div>
+
+<section class='section history' id='history'>
+  <div class='section-header'>
+    <p class='section-label reveal'>History</p>
+    <h2 class='section-title reveal reveal-d1'>千年蜀史</h2>
+    <p class='section-subtitle reveal reveal-d2'>从古蜀文明到现代蓉城，时光在这里沉淀出独特的韵味</p>
+  </div>
+  <div class='timeline'>
+    <div class='timeline-item reveal'>
+      <div class='timeline-content'>
+        <p class='timeline-period'>公元前11世纪</p>
+        <h3 class='timeline-title'>古蜀国兴起</h3>
+        <p class='timeline-desc'>蚕丛、鱼凫开明氏相继统治蜀地，三星堆、金沙遗址见证了一个神秘而辉煌的青铜文明。</p>
+      </div>
+      <div class='timeline-dot'></div>
+    </div>
+    <div class='timeline-item reveal'>
+      <div class='timeline-content'>
+        <p class='timeline-period'>公元前256年</p>
+        <h3 class='timeline-title'>都江堰建成</h3>
+        <p class='timeline-desc'>李冰父子主持修建都江堰水利工程，使成都平原成为水旱从人不知饥馑的天府之国。</p>
+      </div>
+      <div class='timeline-dot'></div>
+    </div>
+    <div class='timeline-item reveal'>
+      <div class='timeline-content'>
+        <p class='timeline-period'>三国时期</p>
+        <h3 class='timeline-title'>蜀汉都城</h3>
+        <p class='timeline-desc'>刘备建都成都，诸葛亮治蜀，武侯祠至今仍是后人凭吊这段英雄岁月的圣地。</p>
+      </div>
+      <div class='timeline-dot'></div>
+    </div>
+    <div class='timeline-item reveal'>
+      <div class='timeline-content'>
+        <p class='timeline-period'>唐宋时期</p>
+        <h3 class='timeline-title'>繁华蓉城</h3>
+        <p class='timeline-desc'>成都成为全国重要的商业都市，扬一益二之说流传千年。杜甫草堂、万里桥畔，诗圣留下了无数千古名篇。</p>
+      </div>
+      <div class='timeline-dot'></div>
+    </div>
+    <div class='timeline-item reveal'>
+      <div class='timeline-content'>
+        <p class='timeline-period'>当代</p>
+        <h3 class='timeline-title'>现代蓉城</h3>
+        <p class='timeline-desc'>作为西南中心城市，成都既保留了慢生活的闲适，又展现出国际化大都市的蓬勃活力，入选中国最具幸福感城市多年。</p>
+      </div>
+      <div class='timeline-dot'></div>
+    </div>
+  </div>
+</section>
+
+<div class='ink-divider'></div>
+
+<section class='section gallery' id='gallery'>
+  <div class='section-header'>
+    <p class='section-label reveal'>Antiquities</p>
+    <h2 class='section-title reveal reveal-d1'>穿越千年 · 探源蜀地</h2>
+    <p class='section-subtitle reveal reveal-d2'>从三星堆到金沙，从诗圣草堂到都江堰，这些坐标串起古蜀文明最动人的时光走廊</p>
+  </div>
+  <div class='gallery-grid'>
+    <div class='gallery-card gallery-card--tall reveal'>
+      <img src='chengdu-images/sanxingdui.jpg' alt='三星堆祭祀坑出土的青铜纵目面具' loading='lazy' width='800' height='533'>
+      <div class='gallery-info'>
+        <span class='gallery-tag'>古蜀文明</span>
+        <h3 class='gallery-name'>三星堆 · 青铜时代</h3>
+        <p class='gallery-desc'>纵目面具与青铜神树，展开一个充满想象力的古蜀世界。</p>
+      </div>
+    </div>
+    <div class='gallery-card gallery-card--sunbird reveal reveal-d1'>
+      <div class='gallery-sunbird'>
+        <svg viewBox='0 0 100 100' fill='none' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'>
+          <g fill='none' stroke='currentColor'>
+            <polyline points='50,10 53,20 56,10 59,20 62,10 65,20'/>
+            <polyline points='50,90 47,80 44,90 41,80 38,90 35,80'/>
+            <polyline points='10,50 20,47 10,44 20,41 10,38 20,35'/>
+            <polyline points='90,50 80,47 90,44 80,41 90,38 80,35'/>
+            <polyline points='25,25 32,30 34,24 38,31 42,26 44,34'/>
+            <polyline points='75,25 68,30 66,24 62,31 58,26 56,34'/>
+            <polyline points='25,75 32,70 34,76 38,69 42,74 44,66'/>
+            <polyline points='75,75 68,70 66,76 62,69 58,74 56,66'/>
+            <path d='M50 50 C44 44 36 42 30 42 C36 46 42 50 44 56 C46 66 52 72 58 74 C56 68 54 60 50 50 Z'/>
+            <path d='M50 50 C56 44 64 42 70 42 C64 46 58 50 56 56 C54 66 48 72 42 74 C44 68 46 60 50 50 Z'/>
+            <circle cx='50' cy='50' r='9'/>
+            <circle cx='50' cy='50' r='2.5' fill='currentColor' stroke='none'/>
+          </g>
+        </svg>
+        <span class='gallery-tag'>古蜀文明</span>
+        <h3 class='gallery-name'>金沙遗址 · 太阳神鸟</h3>
+        <p class='gallery-desc'>金沙祭祀区出土的太阳神鸟金饰，被誉为中国文化遗产标志，象征古蜀人对光明的礼赞。</p>
+      </div>
+    </div>
+    <div class='gallery-card reveal reveal-d2'>
+      <img src='chengdu-images/dufu.jpg' alt='杜甫草堂茅屋掩映于苍翠竹林中，浣花溪水长流' loading='lazy' width='800' height='608'>
+      <div class='gallery-info'>
+        <span class='gallery-tag'>诗圣故地</span>
+        <h3 class='gallery-name'>杜甫草堂 · 诗圣故居</h3>
+        <p class='gallery-desc'>茅屋为秋风所破歌之地，浣花溪水千年不息。</p>
+      </div>
+    </div>
+    <div class='gallery-card reveal reveal-d1'>
+      <img src='chengdu-images/dujiangyan.jpg' alt='都江堰鱼嘴分水堤俯瞰岷江，两千年无坝引水润泽天府' loading='lazy' width='800' height='534'>
+      <div class='gallery-info'>
+        <span class='gallery-tag'>世界遗产</span>
+        <h3 class='gallery-name'>都江堰 · 千年水韵</h3>
+        <p class='gallery-desc'>无坝引水的古老智慧，两千多年仍润泽天府。</p>
+      </div>
+    </div>
+    <div class='gallery-card gallery-card--quote reveal reveal-d2'>
+      <div class='gallery-quote'>
+        <span class='gallery-tag'>蓉城诗笺</span>
+        <blockquote class='gallery-quote-text'>“窗含西岭千秋雪，门泊东吴万里船。”</blockquote>
+        <p class='gallery-quote-author'>—— 杜甫《绝句》</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class='ink-divider ink-divider--dark'></div>
+
+<section class='section section--dark landmarks' id='landmarks'>
+  <div class='section-header'>
+    <p class='section-label reveal'>Landmarks</p>
+    <h2 class='section-title reveal reveal-d1'>必游地标</h2>
+    <p class='section-subtitle reveal reveal-d2'>走进成都的经典之地，感受这座城市的历史底蕴与现代魅力</p>
+  </div>
+  <div class='landmarks-grid'>
+    <div class='landmark-card landmark-card--featured reveal'>
+      <img src='chengdu-images/kuazhai.jpg' alt='宽窄巷子青砖黛瓦川西民居老街，古今文创风情交融' loading='lazy' width='800' height='533'>
+      <div class='landmark-info'>
+        <span class='landmark-tag'>历史文化街区</span>
+        <h3 class='landmark-name'>宽窄巷子</h3>
+        <p class='landmark-desc'>宽巷子、窄巷子、井巷子三条老街，承载着成都老城的记忆。青砖黛瓦间，既有传统川西民居的韵味，也有新潮文创的空间。</p>
+      </div>
+    </div>
+    <div class='landmark-card reveal reveal-d1'>
+      <img src='chengdu-images/jinli.jpg' alt='锦里古街夜色中红灯笼高挂的民俗街巷' loading='lazy' width='800' height='533'>
+      <div class='landmark-info'>
+        <span class='landmark-tag'>古风街区</span>
+        <h3 class='landmark-name'>锦里古街</h3>
+        <p class='landmark-desc'>紧邻武侯祠，夜晚的锦里红灯笼高挂，是体验成都夜生活和地道小吃的绝佳去处。</p>
+      </div>
+    </div>
+    <div class='landmark-card reveal reveal-d2'>
+      <img src='chengdu-images/wuhou.jpg' alt='武侯祠红墙黛瓦山门，君臣合祀的三国圣地' loading='lazy' width='1280' height='837'>
+      <div class='landmark-info'>
+        <span class='landmark-tag'>三国文化</span>
+        <h3 class='landmark-name'>武侯祠</h3>
+        <p class='landmark-desc'>中国唯一的一座君臣合祀祠庙，纪念诸葛亮与刘备，是了解三国历史的文化圣地。</p>
+      </div>
+    </div>
+    <div class='landmark-card reveal'>
+      <img src='chengdu-images/dujiangyan.jpg' alt='都江堰鱼嘴分水堤，两千多年水利奇迹灌溉天府良田' loading='lazy' width='800' height='534'>
+      <div class='landmark-info'>
+        <span class='landmark-tag'>世界遗产</span>
+        <h3 class='landmark-name'>都江堰</h3>
+        <p class='landmark-desc'>两千多年的水利工程奇迹，至今仍灌溉着成都平原千万亩良田，是世界文化遗产。</p>
+      </div>
+    </div>
+    <div class='landmark-card reveal reveal-d1'>
+      <img src='chengdu-images/panda.jpg' alt='大熊猫繁育研究基地里抱着竹子啃食的国宝大熊猫' loading='lazy' width='800' height='533'>
+      <div class='landmark-info'>
+        <span class='landmark-tag'>国宝家园</span>
+        <h3 class='landmark-name'>大熊猫繁育研究基地</h3>
+        <p class='landmark-desc'>近距离观赏国宝大熊猫的最佳去处，萌态可掬的熊猫是成都最生动的名片。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class='ink-divider'></div>
+
+<section class='section food' id='food'>
+  <div class='section-header'>
+    <p class='section-label reveal'>Cuisine</p>
+    <h2 class='section-title reveal reveal-d1'>成都美食</h2>
+    <p class='section-subtitle reveal reveal-d2'>舌尖上的成都，麻辣鲜香中藏着这座城市最热烈的人间烟火</p>
+  </div>
+  <div class='food-grid'>
+    <div class='food-card reveal'>
+      <div class='food-image'>
+        <img src='chengdu-images/hotpot.jpg' alt='红汤翻滚的九宫格成都火锅，花椒辣椒翻滚香辣扑鼻' loading='lazy' width='1024' height='686'>
+      </div>
+      <div class='food-body'>
+        <h3 class='food-name'>成都火锅</h3>
+        <p class='food-origin'>蜀地麻辣 · 千年传承</p>
+        <p class='food-desc'>红汤翻滚，花椒与辣椒在锅中共舞。毛肚、黄喉、鸭肠七上八下，蘸上香油蒜泥，是成都人最酣畅淋漓的饮食享受。</p>
+      </div>
+    </div>
+    <div class='food-card reveal reveal-d1'>
+      <div class='food-image'>
+        <img src='chengdu-images/dandanmian.jpg' alt='细如丝的担担面淋上秘制红油与肉臊花生' loading='lazy' width='800' height='533'>
+      </div>
+      <div class='food-body'>
+        <h3 class='food-name'>担担面</h3>
+        <p class='food-origin'>街头名食 · 百年经典</p>
+        <p class='food-desc'>细面如丝，浇上秘制红油与芽菜臊子，麻辣鲜香在舌尖绽放。挑担叫卖的街头智慧，成就了这道成都经典。</p>
+      </div>
+    </div>
+    <div class='food-card reveal reveal-d2'>
+      <div class='food-image'>
+        <img src='chengdu-images/shuijiao.jpg' alt='皮薄馅嫩的红油钟水饺，淋上甜辣酱汁' loading='lazy' width='800' height='530'>
+      </div>
+      <div class='food-body'>
+        <h3 class='food-name'>钟水饺</h3>
+        <p class='food-origin'>西御街 · 老字号</p>
+        <p class='food-desc'>纯肉馅的水饺，不配汤而配红油酱。皮薄馅嫩，汁水丰盈，甜辣交织的风味独属于成都。</p>
+      </div>
+    </div>
+    <div class='food-card reveal reveal-d3'>
+      <div class='food-image'>
+        <img src='chengdu-images/tangyouguozi.jpg' alt='金黄酥脆裹红糖芝麻的糖油果子串在竹签上' loading='lazy' width='800' height='534'>
+      </div>
+      <div class='food-body'>
+        <h3 class='food-name'>糖油果子</h3>
+        <p class='food-origin'>街头小吃 · 老少皆宜</p>
+        <p class='food-desc'>糯米团裹上红糖与芝麻，在油锅中翻滚至金黄。外酥里糯，甜而不腻，是成都街头最温暖的甜蜜记忆。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class='ink-divider ink-divider--dark'></div>
+
+<section class='section heritage' id='heritage'>
+  <div class='section-header'>
+    <p class='section-label reveal'>Heritage</p>
+    <h2 class='section-title reveal reveal-d1'>蜀地非遗</h2>
+    <p class='section-subtitle reveal reveal-d2'>匠心传承，千年技艺在指间流淌，诉说着巴蜀大地的文化记忆</p>
+  </div>
+  <div class='heritage-grid'>
+    <div class='heritage-card reveal'>
+      <div class='heritage-icon'>绣</div>
+      <h3 class='heritage-name'>蜀绣</h3>
+      <p class='heritage-desc'>中国四大名绣之一，以软滑的绸面和细腻的针法著称。题材多为花鸟虫鱼、山水人物，针脚工整，色彩明丽，千年不绝。</p>
+    </div>
+    <div class='heritage-card reveal reveal-d1'>
+      <div class='heritage-icon'>剧</div>
+      <h3 class='heritage-name'>川剧</h3>
+      <p class='heritage-desc'>变脸、吐火、滚灯，川剧绝活闻名天下。高亢的唱腔与诙谐的表演，展现了蜀地人民豪爽乐观的性格。</p>
+    </div>
+    <div class='heritage-card reveal reveal-d2'>
+      <div class='heritage-icon'>竹</div>
+      <h3 class='heritage-name'>竹编工艺</h3>
+      <p class='heritage-desc'>成都崇州道明竹编历史悠久，以细密精巧著称。一件件竹器，承载着匠人对自然的敬畏与对生活的热爱。</p>
+    </div>
+  </div>
+</section>
+
+<div class='ink-divider'></div>
+
+<section class='section tips' id='tips'>
+  <div class='section-header'>
+    <p class='section-label reveal'>Tips</p>
+    <h2 class='section-title reveal reveal-d1'>慢生活与旅行贴士</h2>
+    <p class='section-subtitle reveal reveal-d2'>融入成都的节奏，像当地人一样生活</p>
+  </div>
+  <div class='tips-content'>
+    <div class='tips-card reveal'>
+      <div class='tips-card-icon'>
+        <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><path d='M17 8h1a4 4 0 1 1 0 8h-1'/><path d='M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z'/><line x1='6' y1='2' x2='6' y2='4'/><line x1='10' y1='2' x2='10' y2='4'/><line x1='14' y1='2' x2='14' y2='4'/></svg>
+      </div>
+      <h3>成都慢生活</h3>
+      <ul>
+        <li>清晨去人民公园鹤鸣茶社喝盖碗茶，感受老成都的悠闲</li>
+        <li>傍晚漫步太古里，看传统与现代的奇妙交融</li>
+        <li>深夜流连于九眼桥酒吧街，体验成都不夜的热闹</li>
+        <li>春天去青羊宫看花会，感受花重锦官城的盛景</li>
+      </ul>
+    </div>
+    <div class='tips-card reveal reveal-d1'>
+      <div class='tips-card-icon'>
+        <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><path d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'/><circle cx='12' cy='10' r='3'/></svg>
+      </div>
+      <h3>旅行实用贴士</h3>
+      <ul>
+        <li>最佳旅行季节：春秋两季（3-5月、9-11月），气候宜人</li>
+        <li>交通：地铁覆盖主要景点，出行便捷；机场距市区约50公里</li>
+        <li>美食推荐：宽窄巷子、建设路、奎星楼街是美食聚集地</li>
+        <li>住宿：春熙路-太古里商圈是最佳选择，交通便利、购物方便</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class='ink-divider'></div>
+
+<section class='section links' id='links'>
+  <div class='section-header'>
+    <p class='section-label reveal'>Official</p>
+    <h2 class='section-title reveal reveal-d1'>官方直达</h2>
+    <p class='section-subtitle reveal reveal-d2'>以下均为各景点与文旅主管部门官方网站，可查询最新票务、展览与开放信息</p>
+  </div>
+  <div class='links-grid'>
+    <a class='link-card reveal' href='https://cdwglj.chengdu.gov.cn/' target='_blank' rel='noopener noreferrer'>
+      <div class='link-icon'>
+        <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><line x1='3' y1='22' x2='21' y2='22'/><line x1='6' y1='18' x2='6' y2='11'/><line x1='10' y1='18' x2='10' y2='11'/><line x1='14' y1='18' x2='14' y2='11'/><line x1='18' y1='18' x2='18' y2='11'/><polygon points='12 2 20 7 4 7'/></svg>
+      </div>
+      <div class='link-body'>
+        <div class='link-name'>成都市文化广电旅游局</div>
+        <span class='link-domain'>cdwglj.chengdu.gov.cn</span>
+        <p class='link-desc'>成都文旅官方政务门户，发布文旅活动、政策与城市资讯。</p>
+      </div>
+      <span class='link-arrow'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='7' y1='17' x2='17' y2='7'/><polyline points='7 7 17 7 17 17'/></svg></span>
+    </a>
+    <a class='link-card reveal reveal-d1' href='https://www.panda.org.cn/' target='_blank' rel='noopener noreferrer'>
+      <div class='link-icon'>
+        <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='13' r='8'/><circle cx='8.5' cy='11' r='1.6' fill='currentColor'/><circle cx='15.5' cy='11' r='1.6' fill='currentColor'/><path d='M9 16.5c1.8 1.2 4.2 1.2 6 0'/><circle cx='5' cy='5' r='2'/><circle cx='19' cy='5' r='2'/></svg>
+      </div>
+      <div class='link-body'>
+        <div class='link-name'>成都大熊猫繁育研究基地</div>
+        <span class='link-domain'>panda.org.cn</span>
+        <p class='link-desc'>国宝熊猫官方园区，查看开放时间、购票与最新动态。</p>
+      </div>
+      <span class='link-arrow'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='7' y1='17' x2='17' y2='7'/><polyline points='7 7 17 7 17 17'/></svg></span>
+    </a>
+    <a class='link-card reveal reveal-d2' href='https://www.wuhouci.net.cn/' target='_blank' rel='noopener noreferrer'>
+      <div class='link-icon'>
+        <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><path d='M3 10 L12 3 L21 10'/><path d='M5 10 V20 H19 V10'/><path d='M10 20 V14 H14 V20'/></svg>
+      </div>
+      <div class='link-body'>
+        <div class='link-name'>成都武侯祠博物馆</div>
+        <span class='link-domain'>wuhouci.net.cn</span>
+        <p class='link-desc'>君臣合祀的三国圣地，展览、研学与锦里民俗区资讯。</p>
+      </div>
+      <span class='link-arrow'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='7' y1='17' x2='17' y2='7'/><polyline points='7 7 17 7 17 17'/></svg></span>
+    </a>
+    <a class='link-card reveal' href='https://www.cddfct.cn/' target='_blank' rel='noopener noreferrer'>
+      <div class='link-icon'>
+        <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><path d='M4 19.5 A2.5 2.5 0 0 1 6.5 17 H20 V4 H6.5 A2.5 2.5 0 0 0 4 6.5 Z'/><path d='M4 19.5 A2.5 2.5 0 0 0 6.5 22 H20 V17'/></svg>
+      </div>
+      <div class='link-body'>
+        <div class='link-name'>成都杜甫草堂博物馆</div>
+        <span class='link-domain'>cddfct.cn</span>
+        <p class='link-desc'>诗圣杜甫流寓成都时的故居，诗史堂与园林展览信息。</p>
+      </div>
+      <span class='link-arrow'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='7' y1='17' x2='17' y2='7'/><polyline points='7 7 17 7 17 17'/></svg></span>
+    </a>
+    <a class='link-card reveal reveal-d1' href='https://www.jinshasitemuseum.com/' target='_blank' rel='noopener noreferrer'>
+      <div class='link-icon'>
+        <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='9'/><path d='M12 3 a9 9 0 0 1 0 18 M12 3 a9 9 0 0 0 0 18 M3 12 h18'/></svg>
+      </div>
+      <div class='link-body'>
+        <div class='link-name'>成都金沙遗址博物馆</div>
+        <span class='link-domain'>jinshasitemuseum.com</span>
+        <p class='link-desc'>古蜀文明太阳神鸟出土地，常设展与数字云展厅。</p>
+      </div>
+      <span class='link-arrow'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='7' y1='17' x2='17' y2='7'/><polyline points='7 7 17 7 17 17'/></svg></span>
+    </a>
+    <a class='link-card reveal reveal-d2' href='https://www.djy517.com/' target='_blank' rel='noopener noreferrer'>
+      <div class='link-icon'>
+        <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><path d='M2 8c2-2 4-2 6 0s4 2 6 0 4-2 6 0'/><path d='M2 13c2-2 4-2 6 0s4 2 6 0 4-2 6 0'/><path d='M2 18c2-2 4-2 6 0s4 2 6 0 4-2 6 0'/></svg>
+      </div>
+      <div class='link-body'>
+        <div class='link-name'>青城山-都江堰旅游门户</div>
+        <span class='link-domain'>djy517.com</span>
+        <p class='link-desc'>世界遗产景区官方预订平台，门票、索道与游玩攻略。</p>
+      </div>
+      <span class='link-arrow'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='7' y1='17' x2='17' y2='7'/><polyline points='7 7 17 7 17 17'/></svg></span>
+    </a>
+  </div>
+</section>
+
+<footer class='footer'>
+  <div class='footer-logo'>成都</div>
+  <p class='footer-desc'>天府之国，锦绣蓉城。一座来了就不想走的城市，正等待你的到来。</p>
+  <div class='footer-links'>
+    <a href='#top'>回到顶部</a>
+    <a href='#overview'>天府概览</a>
+    <a href='#history'>千年蜀史</a>
+    <a href='#gallery'>探源蜀地</a>
+    <a href='#landmarks'>必游地标</a>
+    <a href='#food'>成都美食</a>
+    <a href='#heritage'>蜀地非遗</a>
+  </div>
+  <div class='footer-divider'></div>
+  <p class='footer-copyright'>© 2026 成都 · 天府之国 · 锦绣蓉城</p>
+</footer>
+
+<div class='back-top' id='backTop' title='回到顶部' role='button' aria-label='回到顶部' tabindex='0'>
+  <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><polyline points='18 15 12 9 6 15'/></svg>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var nav = document.getElementById('nav');
+  var backTop = document.getElementById('backTop');
+  // 系统开启“减少动态效果”时，跳过滚动动画，直接显示所有内容
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('.reveal');
+
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    revealEls.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+    revealEls.forEach(function (el) { io.observe(el); });
+  }
+
+  // 导航当前区块高亮（先声明，供 onScroll 首次调用使用）
+  var sections = ['overview','history','gallery','landmarks','food','heritage','tips'];
+  var links = document.querySelectorAll('.nav-links a');
+  function highlightNav() {
+    var pos = window.pageYOffset + 120;
+    var current = '';
+    sections.forEach(function (id) {
+      var sec = document.getElementById(id);
+      if (sec && sec.offsetTop <= pos) current = id;
+    });
+    links.forEach(function (a) {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  }
+
+  function onScroll() {
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    nav.classList.toggle('scrolled', y > 40);
+    if (backTop) backTop.classList.toggle('show', y > 500);
+    highlightNav();
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  if (backTop) {
+    backTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    // 键盘可达性：回车 / 空格触发回到顶部
+    backTop.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>

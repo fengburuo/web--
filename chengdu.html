@@ -80,6 +80,10 @@ h1,h2,h3,h4 { font-family: 'Noto Serif SC', 'STSong', 'SimSun', serif; font-weig
 .section-title { font-family: 'Noto Serif SC', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: inherit; letter-spacing: 0.08em; margin-bottom: 1rem; }
 .section-subtitle { font-family: 'Noto Sans SC', sans-serif; font-size: 1rem; font-weight: 300; color: var(--ink-light); max-width: 600px; margin: 0 auto; letter-spacing: 0.05em; }
 .section--dark .section-subtitle { color: rgba(250,246,240,0.7); }
+.section-more { display: inline-flex; align-items: center; gap: 6px; margin-top: 18px; padding: 9px 24px; border-radius: 30px; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.08em; text-decoration: none; color: var(--shu-red-deep); border: 1px solid rgba(194,58,43,0.35); background: rgba(255,255,255,0.6); transition: all 0.35s cubic-bezier(0.25,0.46,0.45,0.94); }
+.section-more:hover { background: linear-gradient(135deg, var(--shu-red), var(--shu-red-deep)); color: var(--ginkgo-gold-light); border-color: transparent; transform: translateY(-3px); box-shadow: 0 10px 26px rgba(139,26,26,0.3); }
+.section--dark .section-more { color: var(--ginkgo-gold-light); border-color: rgba(212,168,67,0.45); background: rgba(255,255,255,0.08); }
+.section--dark .section-more:hover { background: linear-gradient(135deg, var(--shu-red), var(--shu-red-deep)); border-color: transparent; }
 
 /* 滚动揭示 */
 html.js .reveal { opacity: 0; transform: translateY(36px); transition: opacity 0.8s cubic-bezier(0.22,0.61,0.36,1), transform 0.8s cubic-bezier(0.22,0.61,0.36,1); will-change: opacity, transform; }
@@ -122,7 +126,9 @@ html.js .reveal.in { opacity: 1; transform: translateY(0); }
 
 /* 穿越千年 · 探源蜀地（画廊） */
 .gallery-grid { display: grid; grid-template-columns: repeat(3,1fr); grid-auto-rows: 240px; gap: 20px; max-width: 1200px; margin: 0 auto; }
-.gallery-card { position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 36px rgba(0,0,0,0.16); transition: all 0.5s cubic-bezier(0.25,0.46,0.45,0.94); aspect-ratio: auto; }
+.gallery-card { position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 36px rgba(0,0,0,0.16); transition: all 0.5s cubic-bezier(0.25,0.46,0.45,0.94); aspect-ratio: auto; display: block; text-decoration: none; color: inherit; cursor: pointer; }
+.gallery-card .card-more { display: inline-flex; align-items: center; gap: 5px; margin-top: 8px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; color: var(--ginkgo-gold-light); opacity: 0; transform: translateY(6px); transition: all 0.4s ease; }
+.gallery-card:hover .card-more { opacity: 1; transform: translateY(0); }
 .gallery-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 20px 56px rgba(139,26,26,0.3); }
 .gallery-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(26,26,26,0.75) 100%); z-index: 1; transition: all 0.4s ease; pointer-events: none; }
 .gallery-card:hover::before { background: linear-gradient(180deg, transparent 25%, rgba(139,26,26,0.75) 100%); }
@@ -150,7 +156,9 @@ html.js .reveal.in { opacity: 1; transform: translateY(0); }
 
 /* 地标 */
 .landmarks-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 30px; max-width: 1200px; margin: 0 auto; }
-.landmark-card { position: relative; border-radius: 20px; overflow: hidden; aspect-ratio: 4/3; box-shadow: 0 10px 40px rgba(0,0,0,0.3); transition: all 0.5s cubic-bezier(0.25,0.46,0.45,0.94); }
+.landmark-card { position: relative; border-radius: 20px; overflow: hidden; aspect-ratio: 4/3; box-shadow: 0 10px 40px rgba(0,0,0,0.3); transition: all 0.5s cubic-bezier(0.25,0.46,0.45,0.94); display: block; text-decoration: none; color: inherit; cursor: pointer; }
+.landmark-card .card-more { display: inline-flex; align-items: center; gap: 5px; margin-top: 8px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; color: var(--ginkgo-gold-light); opacity: 0; transform: translateY(6px); transition: all 0.4s ease; }
+.landmark-card:hover .card-more { opacity: 1; transform: translateY(0); }
 .landmark-card:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 20px 60px rgba(194,58,43,0.35); }
 .landmark-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(26,26,26,0.82) 100%); z-index: 1; transition: all 0.4s ease; }
 .landmark-card:hover::before { background: linear-gradient(180deg, rgba(194,58,43,0.25) 0%, rgba(26,26,26,0.92) 100%); }
@@ -164,7 +172,9 @@ html.js .reveal.in { opacity: 1; transform: translateY(0); }
 
 /* 美食 */
 .food-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 25px; max-width: 1200px; margin: 0 auto; }
-.food-card { background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.06); border: 1px solid var(--light-gray); transition: all 0.4s ease; }
+.food-card { background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.06); border: 1px solid var(--light-gray); transition: all 0.4s ease; display: block; text-decoration: none; color: inherit; cursor: pointer; }
+.food-card .card-more { display: inline-flex; align-items: center; gap: 5px; margin-top: 10px; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.08em; color: var(--shu-red); opacity: 0; transform: translateY(6px); transition: all 0.4s ease; }
+.food-card:hover .card-more { opacity: 1; transform: translateY(0); }
 .food-card:hover { transform: translateY(-8px); box-shadow: 0 16px 50px rgba(194,58,43,0.18); }
 .food-image { width: 100%; height: 200px; overflow: hidden; }
 .food-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
@@ -178,7 +188,9 @@ html.js .reveal.in { opacity: 1; transform: translateY(0); }
 .heritage { background: linear-gradient(135deg, var(--celadon-green-deep) 0%, var(--celadon-green) 50%, var(--celadon-green-deep) 100%); color: var(--rice-white); position: relative; overflow: hidden; }
 .heritage::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.06) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 50%); pointer-events: none; }
 .heritage-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 30px; max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
-.heritage-card { background: rgba(255,255,255,0.08); backdrop-filter: blur(10px); border-radius: 20px; padding: 40px 30px; border: 1px solid rgba(255,255,255,0.15); transition: all 0.4s ease; text-align: center; }
+.heritage-card { background: rgba(255,255,255,0.08); backdrop-filter: blur(10px); border-radius: 20px; padding: 40px 30px; border: 1px solid rgba(255,255,255,0.15); transition: all 0.4s ease; text-align: center; display: block; text-decoration: none; color: inherit; cursor: pointer; }
+.heritage-card .card-more { display: inline-flex; align-items: center; gap: 5px; margin-top: 10px; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.08em; color: var(--ginkgo-gold-light); opacity: 0; transform: translateY(6px); transition: all 0.4s ease; }
+.heritage-card:hover .card-more { opacity: 1; transform: translateY(0); }
 .heritage-card:hover { transform: translateY(-8px); background: rgba(255,255,255,0.13); box-shadow: 0 20px 50px rgba(0,0,0,0.25); border-color: rgba(255,255,255,0.3); }
 .heritage-icon { width: 80px; height: 80px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, var(--ginkgo-gold), var(--shu-red)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Noto Serif SC', serif; font-size: 1.8rem; font-weight: 700; color: #fff; box-shadow: 0 8px 25px rgba(194,58,43,0.35); }
 .heritage-name { font-family: 'Noto Serif SC', serif; font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; letter-spacing: 0.05em; }
@@ -308,6 +320,7 @@ html.js .reveal.in { opacity: 1; transform: translateY(0); }
     <p class='section-label reveal'>Overview</p>
     <h2 class='section-title reveal reveal-d1'>天府概览</h2>
     <p class='section-subtitle reveal reveal-d2'>成都，别称蓉城，地处四川盆地西部，是四川省省会，有着2300多年的建城史</p>
+    <a href='details/overview.html' class='section-more reveal reveal-d3'>进入专题详情 →</a>
   </div>
   <div class='overview-grid'>
     <div class='overview-image reveal'>
@@ -333,6 +346,7 @@ html.js .reveal.in { opacity: 1; transform: translateY(0); }
     <p class='section-label reveal'>History</p>
     <h2 class='section-title reveal reveal-d1'>千年蜀史</h2>
     <p class='section-subtitle reveal reveal-d2'>从古蜀文明到现代蓉城，时光在这里沉淀出独特的韵味</p>
+    <a href='details/history.html' class='section-more reveal reveal-d3'>进入专题详情 →</a>
   </div>
   <div class='timeline'>
     <div class='timeline-item reveal'>
@@ -385,17 +399,19 @@ html.js .reveal.in { opacity: 1; transform: translateY(0); }
     <p class='section-label reveal'>Antiquities</p>
     <h2 class='section-title reveal reveal-d1'>穿越千年 · 探源蜀地</h2>
     <p class='section-subtitle reveal reveal-d2'>从三星堆到金沙，从诗圣草堂到都江堰，这些坐标串起古蜀文明最动人的时光走廊</p>
+    <a href='details/gallery.html' class='section-more reveal reveal-d3'>进入专题详情 →</a>
   </div>
   <div class='gallery-grid'>
-    <div class='gallery-card gallery-card--tall reveal'>
+    <a href='details/sanxingdui.html' class='gallery-card gallery-card--tall reveal'>
       <img src='chengdu-images/sanxingdui.jpg' alt='三星堆祭祀坑出土的青铜纵目面具' loading='lazy' width='800' height='533'>
       <div class='gallery-info'>
         <span class='gallery-tag'>古蜀文明</span>
         <h3 class='gallery-name'>三星堆 · 青铜时代</h3>
         <p class='gallery-desc'>纵目面具与青铜神树，展开一个充满想象力的古蜀世界。</p>
+        <span class='card-more'>查看详情 →</span>
       </div>
-    </div>
-    <div class='gallery-card gallery-card--sunbird reveal reveal-d1'>
+    </a>
+    <a href='details/jinsha.html' class='gallery-card gallery-card--sunbird reveal reveal-d1'>
       <div class='gallery-sunbird'>
         <svg viewBox='0 0 100 100' fill='none' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'>
           <g fill='none' stroke='currentColor'>
@@ -416,24 +432,27 @@ html.js .reveal.in { opacity: 1; transform: translateY(0); }
         <span class='gallery-tag'>古蜀文明</span>
         <h3 class='gallery-name'>金沙遗址 · 太阳神鸟</h3>
         <p class='gallery-desc'>金沙祭祀区出土的太阳神鸟金饰，被誉为中国文化遗产标志，象征古蜀人对光明的礼赞。</p>
+        <span class='card-more'>查看详情 →</span>
       </div>
-    </div>
-    <div class='gallery-card reveal reveal-d2'>
+    </a>
+    <a href='details/dufu.html' class='gallery-card reveal reveal-d2'>
       <img src='chengdu-images/dufu.jpg' alt='杜甫草堂茅屋掩映于苍翠竹林中，浣花溪水长流' loading='lazy' width='800' height='608'>
       <div class='gallery-info'>
         <span class='gallery-tag'>诗圣故地</span>
         <h3 class='gallery-name'>杜甫草堂 · 诗圣故居</h3>
         <p class='gallery-desc'>茅屋为秋风所破歌之地，浣花溪水千年不息。</p>
+        <span class='card-more'>查看详情 →</span>
       </div>
-    </div>
-    <div class='gallery-card reveal reveal-d1'>
+    </a>
+    <a href='details/dujiangyan.html' class='gallery-card reveal reveal-d1'>
       <img src='chengdu-images/dujiangyan.jpg' alt='都江堰鱼嘴分水堤俯瞰岷江，两千年无坝引水润泽天府' loading='lazy' width='800' height='534'>
       <div class='gallery-info'>
         <span class='gallery-tag'>世界遗产</span>
         <h3 class='gallery-name'>都江堰 · 千年水韵</h3>
         <p class='gallery-desc'>无坝引水的古老智慧，两千多年仍润泽天府。</p>
+        <span class='card-more'>查看详情 →</span>
       </div>
-    </div>
+    </a>
     <div class='gallery-card gallery-card--quote reveal reveal-d2'>
       <div class='gallery-quote'>
         <span class='gallery-tag'>蓉城诗笺</span>
@@ -451,48 +470,54 @@ html.js .reveal.in { opacity: 1; transform: translateY(0); }
     <p class='section-label reveal'>Landmarks</p>
     <h2 class='section-title reveal reveal-d1'>必游地标</h2>
     <p class='section-subtitle reveal reveal-d2'>走进成都的经典之地，感受这座城市的历史底蕴与现代魅力</p>
+    <a href='details/landmarks.html' class='section-more reveal reveal-d3'>进入专题详情 →</a>
   </div>
   <div class='landmarks-grid'>
-    <div class='landmark-card landmark-card--featured reveal'>
+    <a href='details/kuanzhai.html' class='landmark-card landmark-card--featured reveal'>
       <img src='chengdu-images/kuazhai.jpg' alt='宽窄巷子青砖黛瓦川西民居老街，古今文创风情交融' loading='lazy' width='800' height='533'>
       <div class='landmark-info'>
         <span class='landmark-tag'>历史文化街区</span>
         <h3 class='landmark-name'>宽窄巷子</h3>
         <p class='landmark-desc'>宽巷子、窄巷子、井巷子三条老街，承载着成都老城的记忆。青砖黛瓦间，既有传统川西民居的韵味，也有新潮文创的空间。</p>
+        <span class='card-more'>查看详情 →</span>
       </div>
-    </div>
-    <div class='landmark-card reveal reveal-d1'>
+    </a>
+    <a href='details/jinli.html' class='landmark-card reveal reveal-d1'>
       <img src='chengdu-images/jinli.jpg' alt='锦里古街夜色中红灯笼高挂的民俗街巷' loading='lazy' width='800' height='533'>
       <div class='landmark-info'>
         <span class='landmark-tag'>古风街区</span>
         <h3 class='landmark-name'>锦里古街</h3>
         <p class='landmark-desc'>紧邻武侯祠，夜晚的锦里红灯笼高挂，是体验成都夜生活和地道小吃的绝佳去处。</p>
+        <span class='card-more'>查看详情 →</span>
       </div>
-    </div>
-    <div class='landmark-card reveal reveal-d2'>
+    </a>
+    <a href='details/wuhou.html' class='landmark-card reveal reveal-d2'>
       <img src='chengdu-images/wuhou.jpg' alt='武侯祠红墙黛瓦山门，君臣合祀的三国圣地' loading='lazy' width='1280' height='837'>
       <div class='landmark-info'>
         <span class='landmark-tag'>三国文化</span>
         <h3 class='landmark-name'>武侯祠</h3>
         <p class='landmark-desc'>中国唯一的一座君臣合祀祠庙，纪念诸葛亮与刘备，是了解三国历史的文化圣地。</p>
+        <span class='card-more'>查看详情 →</span>
       </div>
-    </div>
-    <div class='landmark-card reveal'>
+    </a>
+    <a href='details/dujiangyan.html' class='landmark-card reveal'>
       <img src='chengdu-images/dujiangyan.jpg' alt='都江堰鱼嘴分水堤，两千多年水利奇迹灌溉天府良田' loading='lazy' width='800' height='534'>
       <div class='landmark-info'>
         <span class='landmark-tag'>世界遗产</span>
         <h3 class='landmark-name'>都江堰</h3>
         <p class='landmark-desc'>两千多年的水利工程奇迹，至今仍灌溉着成都平原千万亩良田，是世界文化遗产。</p>
+        <span class='card-more'>查看详情 →</span>
       </div>
-    </div>
-    <div class='landmark-card reveal reveal-d1'>
+    </a>
+    <a href='details/panda.html' class='landmark-card reveal reveal-d1'>
       <img src='chengdu-images/panda.jpg' alt='大熊猫繁育研究基地里抱着竹子啃食的国宝大熊猫' loading='lazy' width='800' height='533'>
       <div class='landmark-info'>
         <span class='landmark-tag'>国宝家园</span>
         <h3 class='landmark-name'>大熊猫繁育研究基地</h3>
         <p class='landmark-desc'>近距离观赏国宝大熊猫的最佳去处，萌态可掬的熊猫是成都最生动的名片。</p>
+        <span class='card-more'>查看详情 →</span>
       </div>
-    </div>
+    </a>
   </div>
 </section>
 
@@ -503,9 +528,10 @@ html.js .reveal.in { opacity: 1; transform: translateY(0); }
     <p class='section-label reveal'>Cuisine</p>
     <h2 class='section-title reveal reveal-d1'>成都美食</h2>
     <p class='section-subtitle reveal reveal-d2'>舌尖上的成都，麻辣鲜香中藏着这座城市最热烈的人间烟火</p>
+    <a href='details/food.html' class='section-more reveal reveal-d3'>进入专题详情 →</a>
   </div>
   <div class='food-grid'>
-    <div class='food-card reveal'>
+    <a href='details/hotpot.html' class='food-card reveal'>
       <div class='food-image'>
         <img src='chengdu-images/hotpot.jpg' alt='红汤翻滚的九宫格成都火锅，花椒辣椒翻滚香辣扑鼻' loading='lazy' width='1024' height='686'>
       </div>
@@ -513,9 +539,10 @@ html.js .reveal.in { opacity: 1; transform: translateY(0); }
         <h3 class='food-name'>成都火锅</h3>
         <p class='food-origin'>蜀地麻辣 · 千年传承</p>
         <p class='food-desc'>红汤翻滚，花椒与辣椒在锅中共舞。毛肚、黄喉、鸭肠七上八下，蘸上香油蒜泥，是成都人最酣畅淋漓的饮食享受。</p>
+        <span class='card-more'>查看详情 →</span>
       </div>
-    </div>
-    <div class='food-card reveal reveal-d1'>
+    </a>
+    <a href='details/dandanmian.html' class='food-card reveal reveal-d1'>
       <div class='food-image'>
         <img src='chengdu-images/dandanmian.jpg' alt='细如丝的担担面淋上秘制红油与肉臊花生' loading='lazy' width='800' height='533'>
       </div>
@@ -523,9 +550,10 @@ html.js .reveal.in { opacity: 1; transform: translateY(0); }
         <h3 class='food-name'>担担面</h3>
         <p class='food-origin'>街头名食 · 百年经典</p>
         <p class='food-desc'>细面如丝，浇上秘制红油与芽菜臊子，麻辣鲜香在舌尖绽放。挑担叫卖的街头智慧，成就了这道成都经典。</p>
+        <span class='card-more'>查看详情 →</span>
       </div>
-    </div>
-    <div class='food-card reveal reveal-d2'>
+    </a>
+    <a href='details/zhongshuijiao.html' class='food-card reveal reveal-d2'>
       <div class='food-image'>
         <img src='chengdu-images/shuijiao.jpg' alt='皮薄馅嫩的红油钟水饺，淋上甜辣酱汁' loading='lazy' width='800' height='530'>
       </div>
@@ -533,9 +561,10 @@ html.js .reveal.in { opacity: 1; transform: translateY(0); }
         <h3 class='food-name'>钟水饺</h3>
         <p class='food-origin'>西御街 · 老字号</p>
         <p class='food-desc'>纯肉馅的水饺，不配汤而配红油酱。皮薄馅嫩，汁水丰盈，甜辣交织的风味独属于成都。</p>
+        <span class='card-more'>查看详情 →</span>
       </div>
-    </div>
-    <div class='food-card reveal reveal-d3'>
+    </a>
+    <a href='details/tangyouguozi.html' class='food-card reveal reveal-d3'>
       <div class='food-image'>
         <img src='chengdu-images/tangyouguozi.jpg' alt='金黄酥脆裹红糖芝麻的糖油果子串在竹签上' loading='lazy' width='800' height='534'>
       </div>
@@ -543,8 +572,9 @@ html.js .reveal.in { opacity: 1; transform: translateY(0); }
         <h3 class='food-name'>糖油果子</h3>
         <p class='food-origin'>街头小吃 · 老少皆宜</p>
         <p class='food-desc'>糯米团裹上红糖与芝麻，在油锅中翻滚至金黄。外酥里糯，甜而不腻，是成都街头最温暖的甜蜜记忆。</p>
+        <span class='card-more'>查看详情 →</span>
       </div>
-    </div>
+    </a>
   </div>
 </section>
 
@@ -555,23 +585,27 @@ html.js .reveal.in { opacity: 1; transform: translateY(0); }
     <p class='section-label reveal'>Heritage</p>
     <h2 class='section-title reveal reveal-d1'>蜀地非遗</h2>
     <p class='section-subtitle reveal reveal-d2'>匠心传承，千年技艺在指间流淌，诉说着巴蜀大地的文化记忆</p>
+    <a href='details/heritage.html' class='section-more reveal reveal-d3'>进入专题详情 →</a>
   </div>
   <div class='heritage-grid'>
-    <div class='heritage-card reveal'>
+    <a href='details/shuxiu.html' class='heritage-card reveal'>
       <div class='heritage-icon'>绣</div>
       <h3 class='heritage-name'>蜀绣</h3>
       <p class='heritage-desc'>中国四大名绣之一，以软滑的绸面和细腻的针法著称。题材多为花鸟虫鱼、山水人物，针脚工整，色彩明丽，千年不绝。</p>
-    </div>
-    <div class='heritage-card reveal reveal-d1'>
+      <span class='card-more'>查看详情 →</span>
+    </a>
+    <a href='details/chuanju.html' class='heritage-card reveal reveal-d1'>
       <div class='heritage-icon'>剧</div>
       <h3 class='heritage-name'>川剧</h3>
       <p class='heritage-desc'>变脸、吐火、滚灯，川剧绝活闻名天下。高亢的唱腔与诙谐的表演，展现了蜀地人民豪爽乐观的性格。</p>
-    </div>
-    <div class='heritage-card reveal reveal-d2'>
+      <span class='card-more'>查看详情 →</span>
+    </a>
+    <a href='details/zhubian.html' class='heritage-card reveal reveal-d2'>
       <div class='heritage-icon'>竹</div>
       <h3 class='heritage-name'>竹编工艺</h3>
       <p class='heritage-desc'>成都崇州道明竹编历史悠久，以细密精巧著称。一件件竹器，承载着匠人对自然的敬畏与对生活的热爱。</p>
-    </div>
+      <span class='card-more'>查看详情 →</span>
+    </a>
   </div>
 </section>
 
@@ -582,6 +616,7 @@ html.js .reveal.in { opacity: 1; transform: translateY(0); }
     <p class='section-label reveal'>Tips</p>
     <h2 class='section-title reveal reveal-d1'>慢生活与旅行贴士</h2>
     <p class='section-subtitle reveal reveal-d2'>融入成都的节奏，像当地人一样生活</p>
+    <a href='details/tips.html' class='section-more reveal reveal-d3'>进入专题详情 →</a>
   </div>
   <div class='tips-content'>
     <div class='tips-card reveal'>
